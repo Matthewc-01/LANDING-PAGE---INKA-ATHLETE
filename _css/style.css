@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+body{
+	margin:0;
+	padding:0;
+	overflow-x:hidden;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+   overflow-x: hidden; 
+    overflow-y: scroll; 
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+p,a,h1,h2,h3,h4,h5,li,ul{
+    margin: 0;
+    padding: 0;    
+}
+p,a{
+    font-family: 'Open Sans';
+    font-size: 15pt;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Montserrat';
+    font-size: 35pt;
+    font-weight: 300;
+}
+.wrapper{
+    max-width: 1350px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+header{
+    background-color: red;
+    margin-bottom: 50px;
+}
+header .wrapper{
+    margin: 0;
+    height: 100px;
+    margin: 0 auto;
+}
+header .wrapper:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+h1.logo{
+    background-image: url(../_images/logosample-white.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 100px;
+    height: 100px;
+    text-indent: -10000px;
+    float: left;
+    margin: 0;
+}
+header nav{
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header nav:after, header nav ul:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+header nav h2{
+    text-indent: -100000px;
+    height: 0;
+}
+header nav li{
+    float: left;
+    list-style-type: none;
+    margin: 10px 30px;
+}
+header nav li a{
+    text-decoration: none;
+    color: white;
+}
+#main-banner{
+    max-width: 1350px;
+    margin: 0 auto;
+}
+#main-banner .banner-image{
+    float: left;
+    width: 60%;
+}
+#main-banner .banner-description{
+    float: right;
+    width: 40%;
+    text-align: center;
+}
+#main-banner .banner-image img{
+    width: 100%;
+    height: auto;
+}
+#main-banner:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+#main-banner .sliding-banner{
+    background-color: green;
+    width: 170px;
+    position: absolute;
+    top: 170px;
+}
+#main-banner .sliding-banner p{
+    color: white;
+    padding: 10px;
+}

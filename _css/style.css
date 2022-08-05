@@ -16,6 +16,7 @@ body::-webkit-scrollbar {
 p,a,h1,h2,h3,h4,h5,li,ul{
     margin: 0;
     padding: 0;    
+    color: #756e6d;
 }
 p,a,button{
     font-family: 'Open Sans';
@@ -31,10 +32,11 @@ h1,h2,h3,h4,h5{
     max-width: 1350px;
     padding: 0 50px;
     margin: 0 auto;
+    border: solid black;
 }
 header{
     background-color: #b98787;
-    margin-bottom: 50px;
+    
 }
 header .wrapper{
     margin: 0;
@@ -83,14 +85,14 @@ header nav li a{
     color: white;
 }
 #main-banner{
-    max-width: 1350px;
-    margin: 0 auto;
+    margin: 100px 0;
 }
 #main-banner .wrapper{
     display: flex;
     vertical-align: middle;
+    
 }
-#main-banner .wrapper::after{
+#main-banner .wrapper::after,#main-banner::after{
     content: "";
     clear: both;
     display: block; 
@@ -116,12 +118,19 @@ header nav li a{
     content: "";
     clear: both;
 }
-
+@keyframes sliding-image {
+    0%   {opacity: 0;top: 150px}
+    100% {opacity: 1;top: 230px}
+  }
+  
 #main-banner .sliding-banner{
     background-color: #ffeeef;
     width: 170px;
     position: absolute;
-    top: 170px;
+    top: 230px;
+    cursor: pointer;
+    animation-name: sliding-image;
+    animation-duration: 3s;
 }
 #main-banner .sliding-banner p{
     color: #b98787;
@@ -130,8 +139,9 @@ header nav li a{
 .banner-description{
     text-align: center;
     height: auto;
+   
 }
-.banner-description button {
+.banner-description button,#collections a{
     margin-top: 50px;
     background-color: #b98787;
     border: none;
@@ -141,4 +151,39 @@ header nav li a{
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+}
+/* COLLECTIONS */
+#collections{
+    text-align: center;
+    margin: 100px auto;
+}
+
+#collections .wrapper div{
+    float: left;
+    width: 25%;
+    margin: 50px 0;
+    
+}
+
+#collections::after, #collections .wrapper div::after{
+    display: block;
+    content: "";
+    clear: both;   
+}
+#collections .wrapper div img{
+    height: 400px;
+    width: 250px;
+    cursor: pointer;
+}
+#collections .wrapper div p{
+    cursor: pointer;
+}
+#collections .wrapper a{
+    margin-top: -10px;
+}
+
+/* ABOUT */
+#about{
+    text-align: center;
+    margin: 100px auto;
 }
